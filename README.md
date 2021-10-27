@@ -24,6 +24,7 @@
 
 <h3 align="center">
 <br>
+<br>
 A problem-solving programming (PSP) process for designing and developing JavaScript algorithms in less than 1 hour when given only a single statement for any given problem.
 <br>
 <br>
