@@ -34,13 +34,13 @@ A problem-solving programming (PSP) process for designing and developing JavaScr
 <br>
 <br>
 
-Whether you decide you want to become efficient at problem-solving programming to do well on your technical, code interviews, competitive programming, or simply for the sheer gratification of going from a single problem statement to a fully-functional, test-driven JavaScript algorithm in under an hour with no IDE (integrated-development environment), a good problem-solving process might be fundamental to any of the forementioned endeavors.
+Whether you decide you want to become efficient at problem-solving programming to do well on your technical, code interviews, competitive programming, or simply for the sheer gratification of going from a single problem statement to a fully-functional, test-driven-developed JavaScript algorithm in under an hour without a need for an IDE (integrated-development environment), a good problem-solving process might be fundamental to any of the aforementioned endeavors.
 
-Below are specific, detailed steps to I like to keep in mine in a common PSP process:
+Below are specific, detailed steps I like to keep in mine in a common PSP process:
 
 <br>
 
-1. Carefully read (and/or listen to) the problem statement while assuming that you *there is something you do not know*.
+1. Carefully read (and/or listen to) the problem statement while assuming that *there is something you do not know*.
 
 <br>
 
@@ -70,7 +70,7 @@ Below are specific, detailed steps to I like to keep in mine in a common PSP pro
 <br>
 <br>
 
-As I've attempted to emphasize, programming at any given time is the absolute last thing one should do given a process which is truly problem-solving-programming oriented.
+As I've attempted to emphasize, programming at any given time is, in many cases, the last thing one should do given a process which is truly problem-solving-programming oriented.
 
 ...
 
