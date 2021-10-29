@@ -40,7 +40,7 @@ Below are specific, detailed steps I like to keep in mind in a common PSP proces
 
 <br>
 
-1. Carefully read (and/or listen to) the problem statement while assuming that *there is something you do not know*.
+1. Carefully read (and/or listen to) the problem statement while assuming that _there is something you do not know_.
 
 <br>
 
@@ -56,9 +56,10 @@ Below are specific, detailed steps I like to keep in mind in a common PSP proces
  * (...? What are my initial questions about this problem statement?)
  */
 ```
+
 <br>
 
-2. Re-read (or ask the speaker to repeat) the problem statement as many times as you need to *get the gist* of what the problem statement requires.
+2. Re-read (or ask the speaker to repeat) the problem statement as many times as you need to _get the gist_ of what the problem statement requires.
 
 <br>
 
@@ -71,53 +72,79 @@ Below are specific, detailed steps I like to keep in mind in a common PSP proces
  *
  * RE-READ TO "SEE INTO" PROBLEM STATEMENT:
  *
- * (Okay... so I've "got the gist" enough from re-reading this problem statement to start clearing the vagueness and ambiguity in the statement to derive unequivical meaning of what is required here.)
+ * (Okay... so I've "got the gist" enough from 
+ * re-reading this problem statement to start 
+ * clearing the vagueness and ambiguity in the 
+ * statement to derive unequivical meaning of 
+ * what is required here.)
  *
  */
 ```
-3. Formulate and ask your questions rather than assuming you *get it* or understand completely. If you're confused, *be comfortable with your confusion* as this gives you the opportunity to ask multiple questions until you have the *clarity* you need before start programming in *confidence*.
+
+3. Formulate and ask your questions rather than assuming you _get it_ or understand completely. If you're confused, _be comfortable with your confusion_ as this gives you the opportunity to ask multiple questions until you have the _clarity_ you need before start programming in _confidence_.
 
 ```javascript
 /**
  *
  * FORMULATE AND ASK QUESTIONS FOR ASSURED CLARITY OF THE PROBLEM:
  *
- * Given an array of integers (e.g., "[-1, 0, 3, 4, -3]"?) and a value (e.g., 7?), determine if there are any two integers in the array whose sum (addition of only 2 integer values in the array?) is equal to the given value (7?).
+ * Given an array of integers (e.g., "[-1, 0, 3, 4, -3]"?) 
+ * and a value (e.g., 7?), determine if there are any two 
+ * integers in the array whose sum (addition of only 2 
+ * integer values in the array?) is equal to the given 
+ * value (7?).
  */
 
 /**
- * 1. "Given an array... and a value..." <= Does this mean we will always be guaranteed to receive the correct data types for our input data given for our algorithm?
+ * 1. "Given an array... and a value..." <= Does this mean 
+ * we will always be guaranteed to receive the correct data 
+ * types for our input data given for our algorithm?
  */
 
 /**
- * 2. "Given an array of integers..." <= What is the largest and smallest integer values? Are these values positive, negative, and/or include zero, or any possible integer which can be represented in JavaScript?
+ * 2. "Given an array of integers..." <= What is the largest 
+ * and smallest integer values? Are these values positive, 
+ * negative, and/or include zero, or any possible integer 
+ * which can be represented in JavaScript?
  */
 
-/** 
+/**
  * etc.
  */
 ```
+
 <br>
 
-4. Start brainstorming an initial, basic solution with short-handed (or long-handed, if you have time,) comments of each step of the algorithm *before you code* as you explain each step in the algorithm, why you chose each step, and what each step does.
+4. Start brainstorming an initial, basic solution with short-handed (or long-handed, if you have time,) comments of each step of the algorithm _before you code_ as you explain each step in the algorithm, why you chose each step, and what each step does.
 
 <br>
 
 ```javascript
-// Sum of Two Integers
+/*
+ * Sum of Two Integers
+ */
+
 /* 1. Define a dictionary that:
- *    a. keeps items in `integers` visited in linear iterations.
- *    b. keeps it's "complementary operand" (e.g., 4 + 3 === 7, therefore 4 is 3's complementary operand) stored as an integer value.
+ *    a. keeps items in `integers` visited in 
+ *         linear iterations.
+ *    b. keeps it's "complementary operand" (e.g., 
+ *         4 + 3 === 7, therefore 4 is 3's complementary operand) 
+ *         stored as an integer value.
  * 2. Iterate through `integers`, and:
- *    a. if the `value` data given - (minus) the current `x` integer value (or it's complementary operand) has been visited, return `true`.
- *    b. if the current `x` integer value has not been visited, store it in our dictionary and calculate its complementary operand and store it with the `x` integer as its key.
+ *    a. if the `value` data given - (minus) the 
+ *         current `x` integer value (or it's complementary operand) 
+ *         has been visited, return `true`.
+ *    b. if the current `x` integer value has not been visited, 
+ *         store it in our dictionary and calculate its 
+ *         complementary operand and store it 
+ *         with the `x` integer as its key.
  *
  */
 ```
 
 <br>
 
-5. Start testing or *event-storming your brainstorming* for your solution with "what-if" scenarios. You can use your data inputs to test-drive the design of your basic solution — accounting for the base cases (from initial brainstormed solution), and then for the best, average, worst, and edge cases:
+5. Start testing or _event-storming your brainstorming_ for your solution with "what-if" scenarios. You can use your data inputs to test-drive the design of your basic solution — accounting for the base cases (from initial brainstormed solution), and then for the best, average, worst, and edge cases:
 
 - Base (Average, `true`) Case
 - Base (Average, `false`) Case
@@ -141,12 +168,14 @@ Below are specific, detailed steps I like to keep in mind in a common PSP proces
 
 <br>
 
-7. *Finally*, you can start confidently developing your solution and debug with your `testCases`. **Remember, the more low-tech your means for programming (e.g., pencil and paper, Notepad, etc.) the harder it is, yet the better programmer you'll become**.
+7. _Finally_, you can start confidently developing your solution and debug with your `testCases`. **Remember, the more low-tech your means for programming (e.g., pencil and paper, Notepad, etc.) the harder it is, yet the better programmer you'll become**.
 
 <br>
 
 ```javascript
-// Sum of Two Integers
+/*
+ * Sum of Two Integers
+ */
 const sumOfTwoIntegers = (integers, value) => {
   /* 1. Define a dictionary that:
    *    a. keeps items in `integers` visited in linear iterations.
@@ -157,7 +186,8 @@ const sumOfTwoIntegers = (integers, value) => {
   // 2. Iterate through `integers`, and:
   integers.forEach((x) => {
     //    a. if the `value` data given - (minus) the current `x` integer value (or it's complementary operand) has been visited, return `true`.
-    if (complementaryOperands[`${value - x}`] === x) foundComplementaries = true;
+    if (complementaryOperands[`${value - x}`] === x)
+      foundComplementaries = true;
     //    b. if the current `x` integer value has not been visited, store it in our dictionary and calculate its complementary operand and store it with the `x` integer as its key.
     if (complementaryOperands[`${x}`] === undefined) {
       complementaryOperands[`${x}`] = value - x;
@@ -168,6 +198,7 @@ const sumOfTwoIntegers = (integers, value) => {
 
 testCases.forEach((tc) => console.log(sumOfTwoIntegers(tc.integers, tc.value)));
 ```
+
 <br>
 
 As I've attempted to emphasize, programming at any given time is, in many cases, the last thing one should do given a process which is truly problem-solving-programming oriented.
