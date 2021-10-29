@@ -318,7 +318,3 @@ const sumOfTwoIntegers = (integers, value) => {
 };
 
 testCases.forEach((tc) => console.log(sumOfTwoIntegers(tc.integers, tc.value)));
-
-/**
- ******************************************************************
- */
