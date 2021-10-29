@@ -72,10 +72,10 @@ Below are specific, detailed steps I like to keep in mind in a common PSP proces
  *
  * RE-READ TO "SEE INTO" PROBLEM STATEMENT:
  *
- * (Okay... so I've "got the gist" enough from 
- * re-reading this problem statement to start 
- * clearing the vagueness and ambiguity in the 
- * statement to derive unequivical meaning of 
+ * (Okay... so I've "got the gist" enough from
+ * re-reading this problem statement to start
+ * clearing the vagueness and ambiguity in the
+ * statement to derive unequivical meaning of
  * what is required here.)
  *
  */
@@ -88,23 +88,23 @@ Below are specific, detailed steps I like to keep in mind in a common PSP proces
  *
  * FORMULATE AND ASK QUESTIONS FOR ASSURED CLARITY OF THE PROBLEM:
  *
- * Given an array of integers (e.g., "[-1, 0, 3, 4, -3]"?) 
- * and a value (e.g., 7?), determine if there are any two 
- * integers in the array whose sum (addition of only 2 
- * integer values in the array?) is equal to the given 
+ * Given an array of integers (e.g., "[-1, 0, 3, 4, -3]"?)
+ * and a value (e.g., 7?), determine if there are any two
+ * integers in the array whose sum (addition of only 2
+ * integer values in the array?) is equal to the given
  * value (7?).
  */
 
 /**
- * 1. "Given an array... and a value..." <= Does this mean 
- * we will always be guaranteed to receive the correct data 
+ * 1. "Given an array... and a value..." <= Does this mean
+ * we will always be guaranteed to receive the correct data
  * types for our input data given for our algorithm?
  */
 
 /**
- * 2. "Given an array of integers..." <= What is the largest 
- * and smallest integer values? Are these values positive, 
- * negative, and/or include zero, or any possible integer 
+ * 2. "Given an array of integers..." <= What is the largest
+ * and smallest integer values? Are these values positive,
+ * negative, and/or include zero, or any possible integer
  * which can be represented in JavaScript?
  */
 
@@ -125,18 +125,18 @@ Below are specific, detailed steps I like to keep in mind in a common PSP proces
  */
 
 /* 1. Define a dictionary that:
- *    a. keeps items in `integers` visited in 
+ *    a. keeps items in `integers` visited in
  *         linear iterations.
- *    b. keeps it's "complementary operand" (e.g., 
- *         4 + 3 === 7, therefore 4 is 3's complementary operand) 
+ *    b. keeps it's "complementary operand" (e.g.,
+ *         4 + 3 === 7, therefore 4 is 3's complementary operand)
  *         stored as an integer value.
  * 2. Iterate through `integers`, and:
- *    a. if the `value` data given - (minus) the 
- *         current `x` integer value (or it's complementary operand) 
+ *    a. if the `value` data given - (minus) the
+ *         current `x` integer value (or it's complementary operand)
  *         has been visited, return `true`.
- *    b. if the current `x` integer value has not been visited, 
- *         store it in our dictionary and calculate its 
- *         complementary operand and store it 
+ *    b. if the current `x` integer value has not been visited,
+ *         store it in our dictionary and calculate its
+ *         complementary operand and store it
  *         with the `x` integer as its key.
  *
  */
@@ -196,7 +196,20 @@ const sumOfTwoIntegers = (integers, value) => {
   return foundComplementaries;
 };
 
-testCases.forEach((tc) => console.log(sumOfTwoIntegers(tc.integers, tc.value)));
+testCases.forEach((tc, i) => {
+  console.log(`Test Case ${i}: [[${tc.integers}], ${tc.value}]`);
+  if (sumOfTwoIntegers(tc.integers, tc.value) !== tc.expectedResult) {
+    console.log(
+      `Expected Result: ${
+        tc.expectedResult
+      }; Actual Result: ${!tc.expectedResult}; Test Case ${i} Failed (✖).\n`
+    );
+  } else {
+    console.log(
+      `Expected and Actual Results: ${tc.expectedResult}; Test Case ${i} Passed (✔).\n`
+    );
+  }
+});
 ```
 
 <br>
