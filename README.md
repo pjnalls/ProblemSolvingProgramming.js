@@ -179,16 +179,21 @@ Below are specific, detailed steps I like to keep in mind in a common PSP proces
 const sumOfTwoIntegers = (integers, value) => {
   /* 1. Define a dictionary that:
    *    a. keeps items in `integers` visited in linear iterations.
-   *    b. keeps it's "complementary operand" (e.g., 4 + 3 === 7, therefore 4 is 3's complementary operand) stored as an integer value.
+   *    b. keeps it's "complementary operand" (e.g., 
+   *         4 + 3 === 7, therefore 4 is 3's complementary operand) 
+   *         stored as an integer value.
    */
   foundComplementaries = false;
   const complementaryOperands = {};
   // 2. Iterate through `integers`, and:
   integers.forEach((x) => {
-    //    a. if the `value` data given - (minus) the current `x` integer value (or it's complementary operand) has been visited, return `true`.
+    //    a. if the `value` data given - (minus) the current `x` integer value 
+    // (or it's complementary operand) has been visited, return `true`.
     if (complementaryOperands[`${value - x}`] === x)
       foundComplementaries = true;
-    //    b. if the current `x` integer value has not been visited, store it in our dictionary and calculate its complementary operand and store it with the `x` integer as its key.
+    //    b. if the current `x` integer value has not been visited, 
+    // store it in our dictionary and calculate its complementary operand 
+    // and store it with the `x` integer as its key.
     if (complementaryOperands[`${x}`] === undefined) {
       complementaryOperands[`${x}`] = value - x;
     }
