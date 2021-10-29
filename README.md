@@ -62,7 +62,7 @@ Below are specific, detailed steps I like to keep in mind in a common PSP proces
 
 <br>
 
-> Given an array of integers (e.g., "[-1, 0, 3, 4, -3]"?) and a value (7?), determine if there are any two integers in the array whose sum (addition of only 2 integer values in the array?) is equal to the given value (7?).
+> "Given an array of integers (e.g., "[-1, 0, 3, 4, -3]"?) and a value (7?), determine if there are any two integers in the array whose sum (addition of only 2 integer values in the array?) is equal to the given value (7?)".
 
 <br>
 
